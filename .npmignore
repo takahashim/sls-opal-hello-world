@@ -1,0 +1,9 @@
+# package directories
+node_modules
+jspm_packages
+Rakefile
+handler.rb
+.git
+
+# Serverless directories
+.serverless
