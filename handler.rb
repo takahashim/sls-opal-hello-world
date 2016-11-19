@@ -1,11 +1,12 @@
-require 'native'
-class Hello
-  def call(env)
+require 'json'
+
+class Handler
+  def call(event)
     [200,
      {'Content-Type' => 'text/plain'},
      [
-       "message: Hello",
-       "env: #{env.to_s}"
+       JSON.generate(message: 'Go Serverless v1.0! Your function executed successfully!',
+                     input: event)
      ]
     ]
   end
