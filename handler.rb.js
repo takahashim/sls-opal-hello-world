@@ -20690,15 +20690,16 @@ Opal.modules["json"] = function(Opal) {
   Opal.add_stubs(['$require', '$generate']);
   self.$require("json");
   return (function($base, $super) {
-    function $Handler(){};
-    var self = $Handler = $klass($base, $super, 'Handler', $Handler);
+    function $Hello(){};
+    var self = $Hello = $klass($base, $super, 'Hello', $Hello);
 
     var def = self.$$proto, $scope = self.$$scope, TMP_1;
 
-    return (Opal.defn(self, '$call', TMP_1 = function ːcall(event) {
-      var self = this;
+    return (Opal.defs(self, '$handler', TMP_1 = function ːhandler(event) {
+      var self = this, response = nil;
 
-      return [200, $hash2(["Content-Type"], {"Content-Type": "text/plain"}), [$scope.get('JSON').$generate($hash2(["message", "input"], {"message": "Go Serverless v1.0! Your function executed successfully!", "input": event}))]];
-    }, TMP_1.$$arity = 1), nil) && 'call'
+      response = $hash2(["statusCode", "body"], {"statusCode": 200, "body": $scope.get('JSON').$generate($hash2(["message", "input"], {"message": "Go Serverless v1.0! Your function executed successfully!", "input": event}))});
+      return response;
+    }, TMP_1.$$arity = 1), nil) && 'handler'
   })($scope.base, null);
 })(Opal);
