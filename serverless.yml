@@ -11,6 +11,8 @@ package:
     - handler.rb
     - .git/**
     - tmp.json
+    - package.json
+    - .npmignore
 
 functions:
   hello:
