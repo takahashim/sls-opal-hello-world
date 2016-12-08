@@ -5,7 +5,7 @@
   "main": "handler.js",
   "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "opal -r native -cE handler.rb > handler.rb.js",
+      "build": "bundle exec opal -r native -cE handler.rb > handler.rb.js",
       "deploy": "sls deploy"
   },
   "author": "takahashim <takahashimm@gmail.com>",
